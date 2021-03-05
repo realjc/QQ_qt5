@@ -1,12 +1,9 @@
-QT       += core gui
-QT       += network
-QT       += multimedia
+QT       += core gui sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+LIBS     += -std=c++11 -lmysqlpp -lmysqlclient
 TARGET = login
 TEMPLATE = app
 
-CONFIG += c++11 console
-CONFIG -= app_bundle
 
 DEFINES += QT_DEPRECATED_WARNINGS
 
@@ -21,3 +18,4 @@ FORMS += \
 
 HEADERS += \
     include/qq/login.hpp
+    include/qq/setting.hpp
